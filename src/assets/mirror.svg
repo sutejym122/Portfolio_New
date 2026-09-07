@@ -12,7 +12,7 @@
   <rect x="220" y="166" width="1160" height="16" fill="#1b1c1f"/>
   <line x1="220" y1="182" x2="1380" y2="182" stroke="#ffffff14" stroke-width="1"/>
   <circle cx="254" cy="156" r="6" fill="#ff5f57"/><circle cx="275" cy="156" r="6" fill="#febc2e"/><circle cx="296" cy="156" r="6" fill="#28c840"/>
-  <text x="800" y="162" font-size="14" fill="#8a8a90" text-anchor="middle">mirror — run</text>
+  <text x="800" y="162" font-size="14" fill="#8a8a90" text-anchor="middle">mirror · run</text>
 
   <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
     <text x="268" y="246" font-size="19" fill="#6e6e73">$</text>
@@ -37,7 +37,7 @@
 
   <!-- score sparkline -->
   <rect x="700" y="392" width="632" height="122" rx="10" fill="#ffffff06"/>
-  <text x="722" y="418" font-size="12" fill="#6e6e73" letter-spacing="1">SCORE — LAST 12 RUNS</text>
+  <text x="722" y="418" font-size="12" fill="#6e6e73" letter-spacing="1">SCORE / LAST 12 RUNS</text>
   <polyline points="726,486 776,478 826,482 876,470 926,474 976,466 1026,470 1076,462 1126,466 1176,460 1226,464 1276,498"
             fill="none" stroke="#2997ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
   <line x1="722" y1="470" x2="1310" y2="470" stroke="#ffffff1a" stroke-width="1" stroke-dasharray="4 5"/>
@@ -46,7 +46,7 @@
   <rect x="268" y="540" width="1064" height="84" rx="10" fill="#ff453a14"/>
   <rect x="268" y="540" width="3" height="84" rx="1.5" fill="#ff453a"/>
   <text x="298" y="576" font-size="17" font-weight="600" fill="#f5f5f7">Gate failed</text>
-  <text x="298" y="602" font-size="15" fill="#a1a1a6">Regression threshold exceeded — build blocked</text>
+  <text x="298" y="602" font-size="15" fill="#a1a1a6">Regression threshold exceeded. Build blocked.</text>
 
   <text x="268" y="678" font-size="14" fill="#6e6e73">structural · field-accuracy · similarity scorers</text>
 </svg>

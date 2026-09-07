@@ -102,13 +102,12 @@ function Hero() {
         </Reveal>
         <Reveal delay={90}>
           <h1 className="display">
-            I build backend systems &mdash; and the tools that keep them
-            reliable.
+            I build backend systems and the tools that keep them reliable.
           </h1>
         </Reveal>
         <Reveal delay={180}>
           <p className="lead">
-            Sutej &mdash; software engineer working in Python, FastAPI,
+            I&rsquo;m Sutej, a software engineer working in Python, FastAPI,
             TypeScript and React. Two years across enterprise integration,
             product search and research engineering, plus four products I built
             and shipped on my own.
