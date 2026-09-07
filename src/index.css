@@ -2,15 +2,16 @@
    Design tokens
    ============================================ */
 :root {
-  --bg: #ffffff;
-  --bg-soft: #f5f5f7;
-  --bg-tint: #fbfbfd;
-  --ink: #1d1d1f;
-  --ink-soft: #6e6e73;
-  --ink-faint: #86868b;
-  --line: rgba(0, 0, 0, 0.08);
-  --accent: #0071e3;
-  --accent-hover: #0077ed;
+  --bg: #000000;
+  --bg-soft: #0c0c0e;
+  --bg-raised: #141416;
+  --ink: #f5f5f7;
+  --ink-soft: #a1a1a6;
+  --ink-faint: #6e6e73;
+  --line: rgba(255, 255, 255, 0.11);
+  --line-soft: rgba(255, 255, 255, 0.06);
+  --accent: #2997ff;
+  --accent-hover: #4aa8ff;
 
   --maxw: 1040px;
   --radius-lg: 22px;
@@ -31,6 +32,7 @@
 }
 
 html {
+  color-scheme: dark;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -56,7 +58,7 @@ a {
 }
 
 ::selection {
-  background: rgba(0, 113, 227, 0.18);
+  background: rgba(41, 151, 255, 0.28);
 }
 
 /* ============================================
@@ -161,7 +163,7 @@ section {
   right: 0;
   z-index: 100;
   height: 48px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(0, 0, 0, 0.62);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid transparent;
@@ -221,14 +223,11 @@ section {
    Hero
    ============================================ */
 .hero {
-  min-height: 92vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  padding: 168px 0 0;
   text-align: center;
-  padding: 120px 0 80px;
-  background: linear-gradient(180deg, #fbfbfd 0%, #ffffff 100%);
+  background: radial-gradient(120% 70% at 50% 0%, #171a20 0%, #000 60%);
+  overflow: hidden;
 }
 
 .hero .display {
@@ -245,8 +244,91 @@ section {
   display: flex;
   gap: 12px;
   justify-content: center;
-  margin-top: 36px;
+  margin-top: 34px;
   flex-wrap: wrap;
+}
+
+.hero-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 6px 14px;
+  border-radius: 980px;
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #30d158;
+  flex-shrink: 0;
+}
+
+/* product shot anchoring the hero */
+.hero-shot {
+  position: relative;
+  margin: 72px auto 0;
+  max-width: 940px;
+  padding: 0 22px;
+}
+
+.hero-shot-frame {
+  border-radius: 14px 14px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: none;
+  overflow: hidden;
+  background: #141416;
+  box-shadow: 0 -2px 80px rgba(41, 151, 255, 0.16),
+    0 40px 80px -30px rgba(0, 0, 0, 0.9);
+}
+
+.hero-shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  background: #1b1c1f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-shot-bar i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+
+.hero-shot-frame img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+@media (max-width: 620px) {
+  .hero-shot-frame img { height: 190px; }
+}
+
+/* fade the shot into the page instead of cutting it off */
+.hero-shot::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000 92%);
+  pointer-events: none;
+}
+
+@media (max-width: 620px) {
+  .hero { padding-top: 128px; }
+  .hero-shot { margin-top: 48px; }
 }
 
 .btn {
@@ -276,10 +358,10 @@ section {
 .btn-ghost {
   background: transparent;
   color: var(--accent);
-  border-color: rgba(0, 113, 227, 0.35);
+  border-color: rgba(41, 151, 255, 0.4);
 }
 
-.btn-ghost:hover { background: rgba(0, 113, 227, 0.06); }
+.btn-ghost:hover { background: rgba(41, 151, 255, 0.12); }
 
 .hero-availability {
   display: inline-flex;
@@ -288,7 +370,7 @@ section {
   margin-bottom: 22px;
   padding: 6px 14px;
   border-radius: 980px;
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.07);
   font-size: 13px;
   color: var(--ink-soft);
 }
@@ -343,21 +425,23 @@ section {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #fff;
+  background: var(--bg-raised);
   border: 1px solid var(--line);
   transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
 }
 
 .project:hover {
   transform: translateY(-4px);
-  box-shadow: 0 22px 60px -22px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 22px 60px -22px rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .project-media {
   position: relative;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--bg-soft);
+  background: #000;
+  border-bottom: 1px solid var(--line-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,7 +481,7 @@ section {
 .chip {
   font-size: 12px;
   color: var(--ink-soft);
-  background: var(--bg-soft);
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 980px;
   padding: 5px 12px;
   letter-spacing: 0;

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { projects, roles, skills, contact } from "./content";
+import heroShot from "./assets/tracepilot.png";
 
 /* Reveals children once they scroll into view. */
 function Reveal({ children, className = "", delay = 0 }) {
@@ -120,6 +121,19 @@ function Hero() {
           </div>
         </Reveal>
       </div>
+
+      <Reveal delay={360}>
+        <div className="hero-shot">
+          <div className="hero-shot-frame">
+            <div className="hero-shot-bar">
+              <i style={{ background: "#ff5f57" }} />
+              <i style={{ background: "#febc2e" }} />
+              <i style={{ background: "#28c840" }} />
+            </div>
+            <img src={heroShot} alt="TracePilot dashboard" />
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }

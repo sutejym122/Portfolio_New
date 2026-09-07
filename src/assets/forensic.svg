@@ -1,62 +1,127 @@
 <svg viewBox="160 90 1280 720" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Helvetica, Arial, sans-serif">
   <defs>
-    <linearGradient id="gbg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f6f5f4"/>
-      <stop offset="100%" stop-color="#eeecea"/>
+    <linearGradient id="fgbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e0f12"/>
+      <stop offset="100%" stop-color="#08090b"/>
     </linearGradient>
-    <filter id="gsh" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000" flood-opacity="0.13"/>
-    </filter>
   </defs>
-  <rect width="1600" height="900" fill="url(#gbg)"/>
+  <rect x="0" y="0" width="1600" height="900" fill="url(#fgbg)"/>
 
-  <g filter="url(#gsh)">
-    <rect x="200" y="120" width="1200" height="660" rx="20" fill="#ffffff"/>
+  <!-- window -->
+  <rect x="200" y="120" width="1200" height="660" rx="16" fill="#141416" stroke="#ffffff1c" stroke-width="1"/>
+  <rect x="200" y="120" width="1200" height="52" rx="16" fill="#1b1c1f"/>
+  <rect x="200" y="156" width="1200" height="16" fill="#1b1c1f"/>
+  <line x1="200" y1="172" x2="1400" y2="172" stroke="#ffffff14" stroke-width="1"/>
+  <circle cx="234" cy="146" r="6" fill="#ff5f57"/><circle cx="255" cy="146" r="6" fill="#febc2e"/><circle cx="276" cy="146" r="6" fill="#28c840"/>
+  <text x="800" y="152" font-size="14" fill="#8a8a90" text-anchor="middle">Composite Builder — Case 2841</text>
+
+  <!-- sidebar -->
+  <line x1="430" y1="172" x2="430" y2="780" stroke="#ffffff12" stroke-width="1"/>
+  <text x="228" y="212" font-size="11" font-weight="600" fill="#6e6e73" letter-spacing="1.2">FEATURE SET</text>
+  <rect x="222" y="228" width="186" height="36" rx="8" fill="#2997ff26"/>
+  <rect x="222" y="228" width="2.5" height="36" rx="1" fill="#2997ff"/>
+  <text x="242" y="252" font-size="14" fill="#2997ff">Eyes · narrow set</text>
+  <text x="242" y="294" font-size="14" fill="#a1a1a6">Nose · aquiline</text>
+  <text x="242" y="332" font-size="14" fill="#a1a1a6">Mouth · thin upper</text>
+  <text x="242" y="370" font-size="14" fill="#a1a1a6">Jawline · square</text>
+  <text x="242" y="408" font-size="14" fill="#a1a1a6">Brow · heavy</text>
+  <text x="242" y="446" font-size="14" fill="#a1a1a6">Hairline · receding</text>
+  <line x1="222" y1="480" x2="408" y2="480" stroke="#ffffff12" stroke-width="1"/>
+  <text x="222" y="512" font-size="11" font-weight="600" fill="#6e6e73" letter-spacing="1.2">WITNESS NOTES</text>
+  <text x="222" y="540" font-size="12.5" fill="#8a8a90">Male, 30–40, approx. 6ft.</text>
+  <text x="222" y="562" font-size="12.5" fill="#8a8a90">Scar noted above left brow.</text>
+
+  <!-- canvas -->
+  <text x="462" y="212" font-size="11" font-weight="600" fill="#6e6e73" letter-spacing="1.2">COMPOSITE</text>
+
+  <!-- detection bounding box -->
+  <g stroke="#2997ff" stroke-width="1.6" fill="none" opacity="0.85">
+    <path d="M596 286 L596 264 L618 264"/><path d="M846 264 L868 264 L868 286"/>
+    <path d="M868 592 L868 614 L846 614"/><path d="M618 614 L596 614 L596 592"/>
   </g>
-  <rect x="200" y="120" width="1200" height="56" rx="20" fill="#fbfbfd"/>
-  <rect x="200" y="158" width="1200" height="18" fill="#fbfbfd"/>
-  <line x1="200" y1="176" x2="1400" y2="176" stroke="#00000012" stroke-width="1"/>
-  <circle cx="236" cy="148" r="6.5" fill="#ff5f57"/>
-  <circle cx="258" cy="148" r="6.5" fill="#febc2e"/>
-  <circle cx="280" cy="148" r="6.5" fill="#28c840"/>
-  <text x="800" y="154" font-size="15" fill="#86868b" text-anchor="middle">Sketch Builder</text>
+  <text x="596" y="252" font-size="11.5" fill="#2997ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">FACE_01 · 0.97</text>
 
-  <!-- component sidebar -->
-  <line x1="440" y1="176" x2="440" y2="780" stroke="#00000010" stroke-width="1"/>
-  <text x="232" y="220" font-size="13" font-weight="600" fill="#86868b">COMPONENTS</text>
-  <rect x="228" y="240" width="184" height="42" rx="9" fill="#eef5ff"/>
-  <text x="248" y="267" font-size="15" fill="#0071e3">Eyes</text>
-  <text x="248" y="317" font-size="15" fill="#6e6e73">Nose</text>
-  <text x="248" y="363" font-size="15" fill="#6e6e73">Mouth</text>
-  <text x="248" y="409" font-size="15" fill="#6e6e73">Jawline</text>
-  <text x="248" y="455" font-size="15" fill="#6e6e73">Hair</text>
+  <!-- sketched face, line-drawing style -->
+  <g stroke="#e6e6ea" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- skull + jaw -->
+    <path d="M636 404 C636 330 672 292 732 292 C792 292 828 330 828 404
+             C828 452 820 496 802 532 C784 568 758 588 732 588
+             C706 588 680 568 662 532 C644 496 636 452 636 404 Z"/>
+    <!-- hairline -->
+    <path d="M642 372 C654 318 688 300 732 300 C776 300 810 318 822 372"/>
+    <path d="M660 344 C684 322 716 316 744 320"/>
+    <!-- brows -->
+    <path d="M664 386 C680 376 700 375 714 381"/>
+    <path d="M750 381 C764 375 784 376 800 386"/>
+    <!-- eyes -->
+    <path d="M668 408 C680 397 700 397 712 408 C700 419 680 419 668 408 Z"/>
+    <path d="M752 408 C764 397 784 397 796 408 C784 419 764 419 752 408 Z"/>
+    <!-- nose -->
+    <path d="M732 400 L732 462 C732 470 726 474 718 474"/>
+    <path d="M712 480 C722 488 742 488 752 480"/>
+    <!-- mouth -->
+    <path d="M700 518 C714 510 750 510 764 518"/>
+    <path d="M700 518 C714 532 750 532 764 518"/>
+    <!-- chin + cheek structure -->
+    <path d="M706 556 C720 562 744 562 758 556"/>
+    <path d="M660 432 C668 462 674 486 684 504" opacity="0.55"/>
+    <path d="M804 432 C796 462 790 486 780 504" opacity="0.55"/>
+    <!-- ears -->
+    <path d="M636 402 C624 400 620 416 626 434 C630 446 636 450 640 448"/>
+    <path d="M828 402 C840 400 844 416 838 434 C834 446 828 450 824 448"/>
+  </g>
 
-  <!-- face canvas -->
-  <circle cx="720" cy="410" r="120" fill="none" stroke="#1d1d1f" stroke-width="2.5"/>
-  <ellipse cx="678" cy="378" rx="17" ry="10" fill="none" stroke="#1d1d1f" stroke-width="2.5"/>
-  <ellipse cx="762" cy="378" rx="17" ry="10" fill="none" stroke="#1d1d1f" stroke-width="2.5"/>
-  <path d="M720 396 L710 436 L730 436" fill="none" stroke="#1d1d1f" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M684 470 Q720 492 756 470" fill="none" stroke="#1d1d1f" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="720" y="576" font-size="14" fill="#86868b" text-anchor="middle">Composite sketch</text>
+  <!-- biometric landmark overlay -->
+  <g fill="#2997ff" opacity="0.9">
+    <circle cx="690" cy="408" r="2.6"/><circle cx="774" cy="408" r="2.6"/>
+    <circle cx="732" cy="400" r="2.6"/><circle cx="732" cy="474" r="2.6"/>
+    <circle cx="712" cy="480" r="2.6"/><circle cx="752" cy="480" r="2.6"/>
+    <circle cx="700" cy="518" r="2.6"/><circle cx="764" cy="518" r="2.6"/>
+    <circle cx="732" cy="525" r="2.6"/>
+    <circle cx="689" cy="381" r="2.6"/><circle cx="775" cy="381" r="2.6"/>
+    <circle cx="638" cy="404" r="2.6"/><circle cx="826" cy="404" r="2.6"/>
+    <circle cx="732" cy="588" r="2.6"/>
+    <circle cx="662" cy="500" r="2.6"/><circle cx="802" cy="500" r="2.6"/>
+  </g>
+  <g stroke="#2997ff" stroke-width="0.9" opacity="0.4" fill="none">
+    <path d="M690 408 L732 400 L774 408 L752 480 L712 480 Z"/>
+    <path d="M712 480 L700 518 L732 525 L764 518 L752 480"/>
+    <path d="M638 404 L690 408 M826 404 L774 408"/>
+    <path d="M689 381 L690 408 M775 381 L774 408"/>
+    <path d="M662 500 L700 518 M802 500 L764 518"/>
+    <path d="M700 518 L732 588 L764 518"/>
+    <path d="M638 404 L662 500 M826 404 L802 500"/>
+  </g>
 
-  <!-- match results -->
-  <line x1="1000" y1="176" x2="1000" y2="780" stroke="#00000010" stroke-width="1"/>
-  <text x="1032" y="220" font-size="13" font-weight="600" fill="#86868b">MATCHES</text>
+  <text x="640" y="656" font-size="12" fill="#6e6e73" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">16 landmarks · descriptor encoded</text>
 
-  <rect x="1028" y="240" width="344" height="76" rx="12" fill="#f7f7f9"/>
-  <circle cx="1068" cy="278" r="22" fill="#dfe3e8"/>
-  <text x="1102" y="272" font-size="15" font-weight="600" fill="#1d1d1f">Record #2841</text>
-  <text x="1102" y="296" font-size="14" fill="#30d158">94.2% similarity</text>
+  <!-- matches -->
+  <line x1="1010" y1="172" x2="1010" y2="780" stroke="#ffffff12" stroke-width="1"/>
+  <text x="1042" y="212" font-size="11" font-weight="600" fill="#6e6e73" letter-spacing="1.2">CANDIDATE MATCHES</text>
 
-  <rect x="1028" y="330" width="344" height="76" rx="12" fill="#f7f7f9"/>
-  <circle cx="1068" cy="368" r="22" fill="#dfe3e8"/>
-  <text x="1102" y="362" font-size="15" font-weight="600" fill="#1d1d1f">Record #1177</text>
-  <text x="1102" y="386" font-size="14" fill="#6e6e73">81.5% similarity</text>
+  <rect x="1036" y="232" width="330" height="82" rx="10" fill="#ffffff0a" stroke="#2997ff4d" stroke-width="1"/>
+  <rect x="1052" y="248" width="50" height="50" rx="6" fill="#26272b"/>
+  <path d="M1062 292 C1062 278 1092 278 1092 292" fill="#3a3b40"/><circle cx="1077" cy="266" r="10" fill="#3a3b40"/>
+  <text x="1118" y="266" font-size="14" font-weight="600" fill="#f5f5f7">Record #2841</text>
+  <text x="1118" y="288" font-size="13" fill="#30d158" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">94.2% match</text>
+  <rect x="1118" y="298" width="230" height="4" rx="2" fill="#ffffff14"/>
+  <rect x="1118" y="298" width="216" height="4" rx="2" fill="#30d158"/>
 
-  <rect x="1028" y="420" width="344" height="76" rx="12" fill="#f7f7f9"/>
-  <circle cx="1068" cy="458" r="22" fill="#dfe3e8"/>
-  <text x="1102" y="452" font-size="15" font-weight="600" fill="#1d1d1f">Record #0932</text>
-  <text x="1102" y="476" font-size="14" fill="#6e6e73">76.9% similarity</text>
+  <rect x="1036" y="330" width="330" height="82" rx="10" fill="#ffffff08"/>
+  <rect x="1052" y="346" width="50" height="50" rx="6" fill="#26272b"/>
+  <path d="M1062 390 C1062 376 1092 376 1092 390" fill="#3a3b40"/><circle cx="1077" cy="364" r="10" fill="#3a3b40"/>
+  <text x="1118" y="364" font-size="14" font-weight="600" fill="#f5f5f7">Record #1177</text>
+  <text x="1118" y="386" font-size="13" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">81.5% match</text>
+  <rect x="1118" y="396" width="230" height="4" rx="2" fill="#ffffff14"/>
+  <rect x="1118" y="396" width="187" height="4" rx="2" fill="#6e6e73"/>
 
-  <text x="1032" y="556" font-size="13" fill="#86868b">via AWS Rekognition</text>
+  <rect x="1036" y="428" width="330" height="82" rx="10" fill="#ffffff08"/>
+  <rect x="1052" y="444" width="50" height="50" rx="6" fill="#26272b"/>
+  <path d="M1062 488 C1062 474 1092 474 1092 488" fill="#3a3b40"/><circle cx="1077" cy="462" r="10" fill="#3a3b40"/>
+  <text x="1118" y="462" font-size="14" font-weight="600" fill="#f5f5f7">Record #0932</text>
+  <text x="1118" y="484" font-size="13" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">76.9% match</text>
+  <rect x="1118" y="494" width="230" height="4" rx="2" fill="#ffffff14"/>
+  <rect x="1118" y="494" width="177" height="4" rx="2" fill="#6e6e73"/>
+
+  <text x="1036" y="560" font-size="12" fill="#6e6e73">Ranked by AWS Rekognition similarity</text>
 </svg>
