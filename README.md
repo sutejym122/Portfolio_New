@@ -1,45 +1,100 @@
 # Portfolio
 
-Personal portfolio site — React + Vite, no UI framework.
+My personal portfolio website, built with React and Vite.
 
-## Running locally
+The site showcases my software engineering experience, projects, technical skills, and contact information.
+
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- HTML
+- CSS
+- Vercel
+
+## Running Locally
+
+Clone the repository and install the dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Build for production:
+Create a production build:
 
 ```bash
 npm run build
-npm run preview   # serve the build locally
 ```
 
-## Editing content
+Preview the production build locally:
 
-All copy lives in **`src/content.js`** — projects, roles, skills and contact
-links. You shouldn't need to touch the components to update the site.
+```bash
+npm run preview
+```
 
-Project images live in `src/assets/`. Three of them (`mirror.svg`,
-`fitforge.svg`, `forensic.svg`) are hand-drawn mockups standing in until real
-screenshots exist; drop a real `.png` in and update the import to swap one out.
+## Project Structure
 
-## Before publishing
+Portfolio content is maintained in:
 
-Search for `TODO` in `src/content.js` — the email address, LinkedIn URL and two
-role date ranges still need filling in.
+```text
+src/content.js
+```
 
-## Design notes
+This includes:
 
-- System font stack (San Francisco on Apple devices) — no webfont to load.
-- One accent colour (`--accent`), defined with the rest of the tokens at the top
-  of `src/index.css`.
-- Scroll reveals use `IntersectionObserver` and respect
-  `prefers-reduced-motion`. No animation library.
-- No 3D, no canvas — the whole page is HTML, CSS and ~67 kB of JS gzipped.
+- Projects
+- Work experience
+- Skills
+- Contact information
+- External links
 
-## Deploying
+Project assets and images are stored in:
 
-Vercel and Netlify both detect Vite automatically: build command `npm run build`,
-output directory `dist`.
+```text
+src/assets/
+```
+
+Static files, including my resume, are stored in:
+
+```text
+public/
+```
+
+## Design
+
+The portfolio was designed and implemented with a lightweight, responsive approach without relying on a UI framework.
+
+Key implementation details include:
+
+- Responsive layouts for desktop and mobile
+- Native system font stack
+- Reusable design tokens and accent styling in `src/index.css`
+- Scroll-based reveal animations using `IntersectionObserver`
+- Support for `prefers-reduced-motion`
+- Lightweight client-side implementation without additional animation or 3D libraries
+
+## Deployment
+
+The application can be deployed on platforms that support Vite applications, including Vercel and Netlify.
+
+Production configuration:
+
+```text
+Build command: npm run build
+Output directory: dist
+```
+
+## Author
+
+**Sutej Yadavanahalli Manjunath**
+
+Software Engineer
+
+[LinkedIn](https://www.linkedin.com/in/sutej-ym/) · [GitHub](https://github.com/sutejym122)
