@@ -6,11 +6,11 @@ import forensic from "./assets/forensic.svg";
 
 // ⚠️ TODO: fill these in before publishing
 export const contact = {
-  email: "your.email@example.com",
+  email: "ymsutej122@gmail.com",
   github: "https://github.com/sutejym122",
-  linkedin: "https://www.linkedin.com/in/YOUR-HANDLE",
+  linkedin: "https://www.linkedin.com/in/sutej-ym/",
   // Drop your PDF at public/resume.pdf and this just works.
-  resume: "/resume.pdf",
+  resume: "/Sutej YM Software Engineer.pdf",
 };
 
 // Scannable proof, right under the headline. Keep these verifiable.
