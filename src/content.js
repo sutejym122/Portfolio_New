@@ -8,6 +8,26 @@ export const contact = {
   email: "your.email@example.com",
   github: "https://github.com/sutejym122",
   linkedin: "https://www.linkedin.com/in/YOUR-HANDLE",
+  // Drop your PDF at public/resume.pdf and this just works.
+  resume: "/resume.pdf",
+};
+
+// Scannable proof, right under the headline. Keep these verifiable.
+export const proof = [
+  { stat: "40%", label: "faster product search at Find Me" },
+  { stat: "15 mo", label: "supporting enterprise IAM & ERP systems" },
+  { stat: "4", label: "products built end-to-end, solo" },
+  { stat: "M.S.", label: "Computer Science, SUNY Binghamton" },
+];
+
+// Shown beside the contact CTA so recruiters can qualify fast.
+export const lookingFor = {
+  roles: "Backend, full-stack or platform engineering",
+  level: "Early-career — roughly 2 years of professional experience",
+  stack: "Python · FastAPI · TypeScript · React · PostgreSQL · AWS",
+  // ⚠️ TODO — set your real location / work preference, and add work
+  // authorization here if you want it answered before the first call.
+  location: "Open to remote and relocation",
 };
 
 export const projects = [
@@ -15,7 +35,7 @@ export const projects = [
     name: "TracePilot",
     kind: "Observability platform",
     blurb:
-      "Release intelligence for teams that ship often. TracePilot connects services, releases, health checks and latency metrics into a single loop, so when a metric degrades you can trace it straight back to the release that likely caused it.",
+      "When a service degrades, the first question is always \u201cwhat changed?\u201d TracePilot answers it \u2014 connecting services, releases, health checks and latency metrics into one loop so a bad metric traces straight back to the release that caused it. Built end-to-end: schema, API, dashboard, deploy.",
     stack: ["FastAPI", "React", "TypeScript", "PostgreSQL"],
     image: tracepilot,
     featured: true,
@@ -38,7 +58,7 @@ export const projects = [
     name: "FitForge",
     kind: "iOS app",
     blurb:
-      "A native fitness and nutrition companion. Reads activity from HealthKit, generates meal plans against your calorie and macro targets, and keeps streaks and weekly insights on the home screen.",
+      "A native iOS companion for training and nutrition. Pulls activity from HealthKit, generates meal plans against calorie and macro targets through a FastAPI service, and surfaces streaks and weekly insight on the home screen through WidgetKit.",
     stack: ["SwiftUI", "HealthKit", "WidgetKit", "FastAPI"],
     image: fitforge,
     links: { source: "https://github.com/sutejym122/FitForge-iOS" },
@@ -47,7 +67,7 @@ export const projects = [
     name: "Forensic Face Sketch",
     kind: "Desktop application",
     blurb:
-      "Builds composite suspect sketches from individual facial components, then compares them against stored records using cloud face recognition to surface likely matches.",
+      "Assembles composite suspect sketches from individual facial features, encodes them, and ranks them against a stored record set using cloud face recognition \u2014 turning a manual sketch-and-compare workflow into a searchable one.",
     stack: ["JavaFX", "AWS Rekognition", "AWS S3"],
     image: forensic,
     links: { source: "https://github.com/sutejym122/Forensic-Face-Sketch" },

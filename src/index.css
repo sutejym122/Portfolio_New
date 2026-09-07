@@ -224,14 +224,14 @@ section {
    ============================================ */
 .hero {
   position: relative;
-  padding: 168px 0 0;
+  padding: 152px 0 0;
   text-align: center;
   background: radial-gradient(120% 70% at 50% 0%, #171a20 0%, #000 60%);
   overflow: hidden;
 }
 
 .hero .display {
-  max-width: 15ch;
+  max-width: 21ch;
   margin: 0 auto;
 }
 
@@ -271,7 +271,7 @@ section {
 /* product shot anchoring the hero */
 .hero-shot {
   position: relative;
-  margin: 72px auto 0;
+  margin: 60px auto 0;
   max-width: 940px;
   padding: 0 22px;
 }
@@ -660,4 +660,89 @@ section {
 .footer-links {
   display: flex;
   gap: 22px;
+}
+
+/* ============================================
+   Recruiter funnel: tertiary button, proof strip,
+   qualifying details
+   ============================================ */
+.btn-plain {
+  background: transparent;
+  color: var(--ink-soft);
+  border-color: transparent;
+}
+
+.btn-plain:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.proof {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 46px;
+  margin-top: 44px;
+}
+
+.proof li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.proof-stat {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.proof-label {
+  font-size: 13px;
+  color: var(--ink-faint);
+  max-width: 18ch;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.looking {
+  margin: 52px auto 0;
+  max-width: 620px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-align: left;
+}
+
+.looking > div {
+  background: var(--bg-soft);
+  padding: 18px 20px;
+}
+
+.looking dt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 6px;
+}
+
+.looking dd {
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+@media (max-width: 620px) {
+  .proof { gap: 18px 30px; margin-top: 34px; }
+  .proof-stat { font-size: 22px; }
+  .looking { grid-template-columns: 1fr; }
 }

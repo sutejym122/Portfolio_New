@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { projects, roles, skills, contact } from "./content";
+import { projects, roles, skills, contact, proof, lookingFor } from "./content";
 import heroShot from "./assets/tracepilot.png";
 
 /* Reveals children once they scroll into view. */
@@ -101,13 +101,17 @@ function Hero() {
           </span>
         </Reveal>
         <Reveal delay={90}>
-          <h1 className="display">Software that holds up in production.</h1>
+          <h1 className="display">
+            I build backend systems &mdash; and the tools that keep them
+            reliable.
+          </h1>
         </Reveal>
         <Reveal delay={180}>
           <p className="lead">
-            I&rsquo;m Sutej &mdash; a software engineer building backend
-            services, full-stack web apps and native iOS. Below is a little of
-            what I&rsquo;ve made.
+            Sutej &mdash; software engineer working in Python, FastAPI,
+            TypeScript and React. Two years across enterprise integration,
+            product search and research engineering, plus four products I built
+            and shipped on my own.
           </p>
         </Reveal>
         <Reveal delay={270}>
@@ -115,10 +119,28 @@ function Hero() {
             <a className="btn btn-primary" href="#work">
               See my work
             </a>
-            <a className="btn btn-ghost" href="#contact">
-              Get in touch
+            <a
+              className="btn btn-ghost"
+              href={contact.resume}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Résumé
+            </a>
+            <a className="btn btn-plain" href={`mailto:${contact.email}`}>
+              Email me
             </a>
           </div>
+        </Reveal>
+        <Reveal delay={340}>
+          <ul className="proof">
+            {proof.map((p) => (
+              <li key={p.label}>
+                <span className="proof-stat">{p.stat}</span>
+                <span className="proof-label">{p.label}</span>
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </div>
 
@@ -291,12 +313,13 @@ function Contact() {
     <section className="section-tint" id="contact">
       <div className="wrap contact">
         <Reveal>
-          <h2 className="display">Let&rsquo;s build something.</h2>
+          <h2 className="display">Hiring? Let&rsquo;s talk.</h2>
         </Reveal>
         <Reveal delay={90}>
           <p className="lead">
-            I&rsquo;m open to software engineering roles and interesting
-            problems. The inbox is always open.
+            I&rsquo;m looking for my next software engineering role. If any of
+            the above fits what you&rsquo;re building, I&rsquo;d like to hear
+            about it.
           </p>
         </Reveal>
         <Reveal delay={180}>
@@ -306,6 +329,14 @@ function Contact() {
             </a>
             <a
               className="btn btn-ghost"
+              href={contact.resume}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download résumé
+            </a>
+            <a
+              className="btn btn-plain"
               href={contact.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -313,6 +344,26 @@ function Contact() {
               LinkedIn
             </a>
           </div>
+        </Reveal>
+        <Reveal delay={260}>
+          <dl className="looking">
+            <div>
+              <dt>Roles</dt>
+              <dd>{lookingFor.roles}</dd>
+            </div>
+            <div>
+              <dt>Level</dt>
+              <dd>{lookingFor.level}</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>{lookingFor.stack}</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>{lookingFor.location}</dd>
+            </div>
+          </dl>
         </Reveal>
       </div>
     </section>
