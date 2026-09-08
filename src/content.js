@@ -53,8 +53,10 @@ export const projects = [
     stack: ["FastAPI", "React", "SQLAlchemy", "SQLite"],
     image: landed,
     featured: true,
-    demo: "https://landed-five.vercel.app",
-    links: { source: "https://github.com/sutejym122/landed" },
+    links: {
+      demo: "https://landed-five.vercel.app",
+      source: "https://github.com/sutejym122/landed",
+    },
   },
   {
     name: "Mirror",
