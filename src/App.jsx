@@ -109,7 +109,7 @@ function Hero() {
           <p className="lead">
             I&rsquo;m Sutej, a software engineer working in Python, FastAPI,
             TypeScript and React. Two years across enterprise integration,
-            product search and research engineering, plus four products I built
+            product search and research engineering, plus five products I built
             and shipped on my own.
           </p>
         </Reveal>
@@ -218,7 +218,7 @@ function Work() {
             <p className="eyebrow">Selected work</p>
             <h2 className="h2">Things I&rsquo;ve built.</h2>
             <p className="lead">
-              Four projects taken from an idea through to something that runs.
+              Five projects taken from an idea through to something that runs.
             </p>
           </div>
         </Reveal>

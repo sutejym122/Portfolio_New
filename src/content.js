@@ -1,4 +1,5 @@
 import tracepilot from "./assets/tracepilot.png";
+import landed from "./assets/landed.png";
 import mirror from "./assets/mirror.svg";
 import fitforge from "./assets/fitforge.svg";
 import forensic from "./assets/forensic.svg";
@@ -16,7 +17,7 @@ export const contact = {
 export const proof = [
   { stat: "40%", label: "faster product search at Find Me" },
   { stat: "15 mo", label: "supporting enterprise IAM & ERP systems" },
-  { stat: "4", label: "products built end-to-end, solo" },
+  { stat: "5", label: "products built end-to-end, solo" },
   { stat: "M.S.", label: "Computer Science, SUNY Binghamton" },
 ];
 
@@ -45,6 +46,16 @@ export const projects = [
     },
   },
   {
+    name: "Landed",
+    kind: "Job search tracker",
+    blurb:
+      "A spreadsheet tells you what you applied to. It does not tell you that your response rate fell the week you stopped writing cover letters, or that eight applications have gone quiet long enough to chase. Landed tracks applications on a board, derives funnel and response-rate analytics from stage history, and checks any posting against your skills.",
+    stack: ["FastAPI", "React", "SQLAlchemy", "SQLite"],
+    image: landed,
+    featured: true,
+    links: { source: "https://github.com/sutejym122/landed" },
+  },
+  {
     name: "Mirror",
     kind: "LLM evaluation harness",
     blurb:
@@ -52,7 +63,7 @@ export const projects = [
     stack: ["Python", "SQLAlchemy", "CLI"],
     image: mirror,
     featured: true,
-    links: { source: null },
+    links: { source: "https://github.com/sutejym122/mirror" },
   },
   {
     name: "FitForge",
